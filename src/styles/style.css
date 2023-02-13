@@ -1,0 +1,34 @@
+* {
+    font-family: sans-serif;
+}
+
+.katalog {
+    background: linear-gradient(270deg, #4D5EF6 0%, #F64D4D 100%);
+}
+.kirish {
+    background: linear-gradient(270deg, rgba(77, 94, 246, 0.2) 0%, rgba(246, 77, 77, 0.2) 100%);
+}
+
+.kirish:hover {
+    background: linear-gradient(270deg, rgba(246, 77, 77, 0.2) 0% rgba(77, 94, 246, 0.2) 100%, );
+}
+
+.main__left-btn {
+    background: linear-gradient(270deg, rgba(77, 94, 246, 0.2) 0%, rgba(246, 77, 77, 0.2) 100%);
+}
+
+.main__right-btn {
+    background: linear-gradient(270deg, #4D5EF6 0%, #F64D4D 100%);
+}
+
+.main__list-item {
+    background: linear-gradient(270deg, rgba(77, 94, 246, 0.2) 0%, rgba(246, 77, 77, 0.2) 100%);
+}
+
+footer {
+    background: linear-gradient(270deg, rgba(77, 94, 246, 0.2) 0%, rgba(246, 77, 77, 0.2) 100%);
+}
+
+.footer__line {
+    transform: rotate(-180deg);
+}

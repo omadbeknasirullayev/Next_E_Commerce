@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- vue SDN -->
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+  <!-- Tailwind CDN play -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- box icon -->
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="./styles/style.css">
+  <title>vue 1</title>
+</head>
+
+<body class="bg-[#ECF4FF]">
+ <div id="root">
+  <header class="bg-white shadow-lg">
+    <nav>
+      <div class="container w-[1600px] mx-auto h-[100px] ">
+        <div class="nav__aloqa gap-2 flex justify-end items-center h-[30px]">
+          <div class="email flex items-center w-[27.8%]">
+            <i class='bx bxs-envelope mr-3'></i>
+            <p class="text-[#1E1E1E] text-[19px]">Aloqa uchun</p>
+          </div>
+
+         <div>
+          <select name="" id="language" >
+            <option value="uzb">UZ</option>
+            <option value="ru">RU</option>
+          </select>
+         </div>
+        </div>
+
+       <div class="nav__main flex justify-between items-center h-[70px] mx-16">
+        <div class="nav__logo">
+          <img src="./images/Logo.svg" alt="">
+        </div>
+
+        <div class="flex gap-24">
+          <div class="katalog flex items-center w-36 h-12 rounded-lg justify-center gap-3 cursor-pointer hover:bg-gradient-to-r to-[#F64D4D] from-[#4D5EF6] ">
+            <i class='bx bx-menu text-white text-[28px]'></i>
+            <p class="uppercase text-[19px]">Katalog</p>
+          </div>
+  
+          <div class="search w-80 rounded-lg">
+            <label for="search" class="flex ">
+              <input type="search" placeholder="Maxsulotlarni izlash" class="border focus:ring-2 focus:outline-none rounded-l-lg w-64 h-12">
+              <div class="w-16 h-12 bg-blue-600 flex items-center justify-center rounded-r-lg">
+               <i class='bx bx-search-alt-2 text-white text-[29px]'></i>
+              </div>
+            </label>
+          </div>
+        </div>
+     
+        <ul class="nav__list flex justify-between w-[30%]">
+          <li class="nav__list-item w-[46px] h-[46px] bg-[#ECF4FF] rounded-lg flex items-center justify-center cursor-pointer hover:bg-gray-300">
+            <i class='bx bx-heart text-[#0D63F3] text-[22px]'></i>
+          </li>
+          <li class="nav__list-item w-[46px] h-[46px] bg-[#ECF4FF] rounded-lg flex items-center justify-center cursor-pointer hover:bg-gray-300">
+            <i class='bx bx-cart-alt text-[#0D63F3] text-[22px]'></i>
+          </li>
+          <li><button class="kirish w-[105px] h-[46px] rounded-lg text-[16px] hover:bg-gradient-to-r from-[#4d5ef639] to-[#f64d4d3a] active:text-gray-400 ">Kirish</button></li>
+        </ul>
+
+       </div>
+      </div>
+    </nav>
+   </header>
+
+   <main>
+    <section class="main">
+      <div class="container mx-auto">
+        <div class="main__content flex justify-between items-center mt-10 ">
+          <div class="main__left-btn w-11 h-11 rounded-[50%] flex items-center justify-center text-[30px] cursor-pointer hover:scale-[1.2] duration-150 active:bg-gradient-to-r from-[#4d5ef639] to-[#f64d4d3a]">
+            <i class='bx bx-chevron-left'></i>
+          </div>
+  
+          <div class="main__img w-[1400px]">
+            <img src="./images/cashback.png" alt="" class="w-[100%]">
+          </div>
+          <div class="main__right-btn w-11 h-11 rounded-[50%] flex items-center justify-center text-[30px] text-white cursor-pointer hover:scale-[1.2] duration-150 active:bg-gradient-to-r to-[#F64D4D] from-[#4D5EF6]">
+            <i class='bx bx-chevron-right'></i>
+          </div>
+        </div>
+
+        <ul class="main__list flex mt-5 gap-5 justify-center">
+          <li class="main__list-item w-4 h-4 rounded-[50%] cursor-pointer hover:scale-[1.3] duration-200 active:bg-gradient-to-r from-[#F64D4D] to-[#4D5EF6]"></li>
+          <li class="main__list-item w-4 h-4 rounded-[50%] cursor-pointer hover:scale-[1.3] duration-200 active:bg-gradient-to-r from-[#F64D4D] to-[#4D5EF6]"></li>
+          <li class="main__list-item w-4 h-4 rounded-[50%] cursor-pointer hover:scale-[1.3] duration-200 active:bg-gradient-to-r from-[#F64D4D] to-[#4D5EF6]"></li>
+          <li class="main__list-item w-4 h-4 rounded-[50%] cursor-pointer hover:scale-[1.3] duration-200 active:bg-gradient-to-r from-[#F64D4D] to-[#4D5EF6]"></li>
+          <li class="main__list-item w-4 h-4 rounded-[50%] cursor-pointer hover:scale-[1.3] duration-200 active:bg-gradient-to-r from-[#F64D4D] to-[#4D5EF6]"></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="category">
+      <div class="container mx-auto">
+        <p class="ml-16 mt-10 text-[#1E1E1E] text-[28px]">Kategoriyalar</p>
+        <ul class="category__list flex justify-between mt-5 mx-16">
+          <li class="category__list-item w-36 h-48 rounded-lg bg-white cursor-pointer hover:scale-[1.1] duration-100 active:shadow-lg">
+            <img src="./images/iphone.png" alt="iphone">
+            <p class="text-[#1E1E1E] text-[14px] flex justify-center mx-5 mt-1">Smartfonlar</p>
+          </li>
+          <li class="category__list-item w-36 h-48 rounded-lg bg-white cursor-pointer hover:scale-[1.1] duration-100 active:shadow-lg">
+            <img src="./images/kategory_apple.png" alt="apple noutbook">
+            <p class="text-[#1E1E1E] text-[14px] flex justify-center mx-5 mt-1">Kompyuterlar va
+              notebooklar</p>
+          </li>
+          <li class="category__list-item w-36 h-48 rounded-lg bg-white cursor-pointer hover:scale-[1.1] duration-100 active:shadow-lg">
+            <img src="./images/kategory_tv.png" alt="tv">
+            <p class="text-[#1E1E1E] text-[14px] flex justify-center mx-5 mt-1">Televizorlar</p>
+          </li>
+          <li class="category__list-item w-36 h-48 rounded-lg bg-white cursor-pointer hover:scale-[1.1] duration-100 active:shadow-lg">
+            <img src="./images/category_watch.png" alt="watch">
+            <p class="text-[#1E1E1E] text-[14px] flex justify-center mx-5 mt-1">Aqlli soatlar</p>
+          </li>
+          <li class="category__list-item w-36 h-48 rounded-lg bg-white cursor-pointer hover:scale-[1.1] duration-100 active:shadow-lg">
+            <img src="./images/vategory_airpods.png" alt="airpods">
+            <p class="text-[#1E1E1E] text-[14px] flex justify-center mx-5 mt-1">Quloqchinlar</p>
+          </li>
+          <li class="category__list-item w-36 h-48 rounded-lg bg-white cursor-pointer hover:scale-[1.1] duration-100 active:shadow-lg">
+            <img src="./images/category_condition.png" alt="condition">
+            <p class="text-[#1E1E1E] text-[14px] flex justify-center mx-5 mt-1">Konditsioner</p>
+          </li>
+          <li class="category__list-item w-36 h-48 rounded-lg bg-white cursor-pointer hover:scale-[1.1] duration-100 active:shadow-lg">
+            <img src="./images/category_freez.png" alt="muzlatgich">
+            <p class="text-[#1E1E1E] text-[14px] flex justify-center mx-5 mt-1">Sovutkichlar</p>
+          </li>
+          <li class="category__list-item w-36 h-48 rounded-lg bg-white cursor-pointer hover:scale-[1.1] duration-100 active:shadow-lg">
+            <img src="./images/category_kirmoshina.png" alt="kir moshina">
+            <p class="text-[#1E1E1E] text-[14px] flex justify-center mx-5 mt-1">Kir yuvish 
+              mashinalari</p>
+          </li>
+        </ul>
+
+        <div class="bg-white mx-16 mt-5 h-12 rounded-lg flex justify-center items-center">
+          <a href="#">Batafsil</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="popular">
+      <div class="container mx-auto">
+        <p class="text-[#1E1E1E] text-[28px] ml-16 mt-10">Eng ko'p sotilgan</p>
+
+        <ul class="popular__list mx-16 mt-5 flex flex-wrap gap-[52px]">
+
+          <li v-for="item in card_info" class="popular__list--card bg-white w-60 p-3 rounded-lg relative hover:shadow-lg">
+           <div class="popular__wrapper flex flex-col ">
+            <div class="absolute right-4">
+              <i class='popular__card-like bx bx-heart text-[#F64D4D] text-[22px] cursor-pointer hover:text-[#ea8383f4]'></i>
+            </div>
+
+              <img src="./images/popular_apple.png" alt="noutbook">
+
+            <div class="popular__list--card-info mx-4">
+              <p class="text-[#0D63F3] text-[20px]">{{item.price}}</p>
+              <p class="text-[#1E1E1E] text-[14px] mt-2 h-12">
+                {{item.title}}
+              </p>
+              <p class="text-[#6C757D] text-[14px] mt-8">{{item.booking}}</p>
+            </div>
+
+            <div class="popular__card-btn flex justify-between items-center mt-6 mx-4 mb-4">
+              <button class="bg-[#0D63F3] w-32 h-10 rounded-lg text-white  hover:bg-blue-400 active:bg-blue-800">Sotib olish</button>
+              <i class='bx bx-cart-alt text-[#6C757D] text-[22px] cursor-pointer hover:text-gray-400 active:text-blue-400'></i>
+            </div>
+           </div>
+          </li>
+
+        </ul>
+
+        <div class="bg-white mx-16 mt-5 h-12 rounded-lg flex justify-center items-center">
+          <a href="#">Ko'proq ko'rish</a>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="dream">
+      <div class="container mx-auto">
+        <div class="main__content flex justify-between items-center mt-10 ">
+          <div class="main__left-btn w-11 h-11 rounded-[50%] flex items-center justify-center text-[30px] cursor-pointer hover:scale-[1.2] duration-150 active:bg-gradient-to-r from-[#4d5ef639] to-[#f64d4d3a]">
+            <i class='bx bx-chevron-left'></i>
+          </div>
+  
+          <div class="main__img w-[1400px]">
+            <img src="./images/dream.png" alt="" class="w-[100%]">
+          </div>
+          <div class="main__right-btn w-11 h-11 rounded-[50%] flex items-center justify-center text-[30px] text-white cursor-pointer hover:scale-[1.2] duration-150 active:bg-gradient-to-r to-[#F64D4D] from-[#4D5EF6]">
+            <i class='bx bx-chevron-right'></i>
+          </div>
+        </div>
+
+        <ul class="main__list flex mt-5 gap-5 justify-center">
+          <li class="main__list-item w-4 h-4 rounded-[50%] cursor-pointer hover:scale-[1.3] duration-200 active:bg-gradient-to-r from-[#F64D4D] to-[#4D5EF6]"></li>
+          <li class="main__list-item w-4 h-4 rounded-[50%] cursor-pointer hover:scale-[1.3] duration-200 active:bg-gradient-to-r from-[#F64D4D] to-[#4D5EF6]"></li>
+          <li class="main__list-item w-4 h-4 rounded-[50%] cursor-pointer hover:scale-[1.3] duration-200 active:bg-gradient-to-r from-[#F64D4D] to-[#4D5EF6]"></li>
+          <li class="main__list-item w-4 h-4 rounded-[50%] cursor-pointer hover:scale-[1.3] duration-200 active:bg-gradient-to-r from-[#F64D4D] to-[#4D5EF6]"></li>
+          <li class="main__list-item w-4 h-4 rounded-[50%] cursor-pointer hover:scale-[1.3] duration-200 active:bg-gradient-to-r from-[#F64D4D] to-[#4D5EF6]"></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="ommabop">
+      <div class="container mx-auto">
+        <p class="text-[#1E1E1E] text-[28px] ml-16 mt-10">Ommabop</p>
+
+        <ul class="popular__list mx-16 mt-5 flex flex-wrap gap-[52px]">
+
+          <li v-for="item in card_info" class="popular__list--card bg-white w-60 p-3 rounded-lg relative hover:shadow-lg">
+           <div class="popular__wrapper flex flex-col ">
+            <div class="absolute right-4">
+              <i class='popular__card-like bx bx-heart text-[#F64D4D] text-[22px] cursor-pointer hover:text-[#ea8383f4]'></i>
+            </div>
+
+              <img src="./images/popular_apple.png" alt="noutbook">
+
+            <div class="popular__list--card-info mx-4">
+              <p class="text-[#0D63F3] text-[20px]">{{item.price}}</p>
+              <p class="text-[#1E1E1E] text-[14px] mt-2 h-12">
+                {{item.title}}
+              </p>
+              <p class="text-[#6C757D] text-[14px] mt-8">{{item.booking}}</p>
+            </div>
+
+            <div class="popular__card-btn flex justify-between items-center mt-6 mx-4 mb-4">
+              <button class="bg-[#0D63F3] w-32 h-10 rounded-lg text-white hover:bg-blue-400 active:bg-blue-800">Sotib olish</button>
+              <i class='bx bx-cart-alt text-[#6C757D] text-[22px] cursor-pointer hover:text-gray-400 active:text-blue-400'></i>
+            </div>
+           </div>
+          </li>
+
+        </ul>
+
+        <div class="bg-white mx-16 mt-5 h-12 rounded-lg flex justify-center items-center">
+          <a href="#">Ko'proq ko'rish</a>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="brends">
+      <div class="container mx-auto mb-16">
+        <p class="text-[#1E1E1E] text-[28px] ml-16 mt-10">Brendlar bo'yicha</p>
+        
+        <ul class="brends__list mx-16 flex flex-wrap mt-5 gap-12">
+          <li v-for="item in brendsName" class="brends__list--card bg-[#FCFFFC] w-48 h-28 flex items-center justify-center cursor-pointer hover:scale-[1.2] active:shadow-lg duration-100">
+            <img :src=item.url alt="salom">
+          
+          </li>
+        </ul>
+      </div>
+    </section>
+
+
+    <section class="dream">
+      <div class="container mx-auto">
+        <div class="main__content flex justify-between items-center mt-10 ">
+          <div class="main__left-btn w-11 h-11 rounded-[50%] flex items-center justify-center text-[30px] cursor-pointer hover:scale-[1.2] duration-150 active:bg-gradient-to-r from-[#4d5ef639] to-[#f64d4d3a]">
+            <i class='bx bx-chevron-left'></i>
+          </div>
+  
+          <div class="main__img w-[1400px]">
+            <img src="./images/dream.png" alt="" class="w-[100%]">
+          </div>
+          <div class="main__right-btn w-11 h-11 rounded-[50%] flex items-center justify-center text-[30px] text-white cursor-pointer hover:scale-[1.2] duration-150 active:bg-gradient-to-r to-[#F64D4D] from-[#4D5EF6]">
+            <i class='bx bx-chevron-right'></i>
+          </div>
+        </div>
+
+        <ul class="main__list flex mt-5 gap-5 justify-center">
+          <li class="main__list-item w-4 h-4 rounded-[50%] cursor-pointer hover:scale-[1.3] duration-200 active:bg-gradient-to-r from-[#F64D4D] to-[#4D5EF6]"></li>
+          <li class="main__list-item w-4 h-4 rounded-[50%] cursor-pointer hover:scale-[1.3] duration-200 active:bg-gradient-to-r from-[#F64D4D] to-[#4D5EF6]"></li>
+          <li class="main__list-item w-4 h-4 rounded-[50%] cursor-pointer hover:scale-[1.3] duration-200 active:bg-gradient-to-r from-[#F64D4D] to-[#4D5EF6]"></li>
+          <li class="main__list-item w-4 h-4 rounded-[50%] cursor-pointer hover:scale-[1.3] duration-200 active:bg-gradient-to-r from-[#F64D4D] to-[#4D5EF6]"></li>
+          <li class="main__list-item w-4 h-4 rounded-[50%] cursor-pointer hover:scale-[1.3] duration-200 active:bg-gradient-to-r from-[#F64D4D] to-[#4D5EF6]"></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="shops">
+      <div class="container mx-auto mb-20">
+        <p class="text-[#1E1E1E] text-[28px] ml-16 mt-10">Do'konlarimiz</p>
+        
+        <ul class="brends__list mx-16 flex flex-wrap mt-5 gap-12">
+          <li v-for="item in shops" class="brends__list--card bg-[#FCFFFC] w-48 h-28 flex items-center justify-center cursor-pointer hover:scale-[1.2] active:shadow-lg duration-100">
+            <img :src=item.url alt="salom">
+          
+          </li>
+        </ul>
+      </div>
+    </section>
+
+  
+   </main>
+
+   <footer>
+    <div class="container mx-auto pt-16">
+      <div class="footer__wrapper mx-16 flex justify-between ">
+
+        <div>
+          <p class="text-[#1E1E1E] text-[19px] font-bold">Hujjatlar</p>
+          <ul class="footer__documents">
+          <li class="footer__documents-item mt-5 cursor-pointer hover:text-gray-400 duration-100">Umumiy shartlar</li>
+          <li class="footer__documents-item mt-5 cursor-pointer hover:text-gray-400 duration-100">Ofertalar arxivi</li>
+          <li class="footer__documents-item mt-5 cursor-pointer hover:text-gray-400 duration-100">Nizom</li>
+          <li class="footer__documents-item mt-5 cursor-pointer hover:text-gray-400 duration-100">Guvohnoma</li>
+        </ul>
+        </div>
+
+        <div>
+          <p class="text-[#1E1E1E] text-[19px] font-bold">Servis</p>
+        <ul class="footer__servis">
+          <li class="footer__servis-item mt-5 cursor-pointer hover:text-gray-400 duration-100">Do'konlar</li>
+          <li class="footer__servis-item mt-5 cursor-pointer hover:text-gray-400 duration-100">Biz haqimizda</li>
+          <li class="footer__servis-item mt-5 cursor-pointer hover:text-gray-400 duration-100">Hamkorlik uchun</li>
+          <li class="footer__servis-item mt-5 cursor-pointer hover:text-gray-400 duration-100">Qaytarish</li>
+          <li class="footer__servis-item mt-5 cursor-pointer hover:text-gray-400 duration-100">Promokodlar</li>
+        </ul>
+        </div>
+        
+        <div>
+          <p class="text-[#1E1E1E] text-[19px] font-bold">Mahsulotlar katalogi</p>
+          <ul class="footer__catalog">
+            <li class="footer__catalog-item mt-5 cursor-pointer hover:text-gray-400 duration-100">katalog 1</li>
+            <li class="footer__catalog-item mt-5 cursor-pointer hover:text-gray-400 duration-100">katalog 1</li>
+            <li class="footer__catalog-item mt-5 cursor-pointer hover:text-gray-400 duration-100">katalog 2</li>
+            <li class="footer__catalog-item mt-5 cursor-pointer hover:text-gray-400 duration-100">katalog 2</li>
+            <li class="footer__catalog-item mt-5 cursor-pointer hover:text-gray-400 duration-100">katalog 3</li>
+            <li class="footer__catalog-item mt-5 cursor-pointer hover:text-gray-400 duration-100">katalog 4</li>
+          </ul>
+        </div>
+
+
+        <div class="footer__about w-1/3 flex flex-col pl-24">
+          <p class="text-[#1E1E1E] text-[19px] font-bold">Axborot xizmati</p>
+          <p class="mt-5">contact.@nextstore.uz</p>
+          <p class="mt-5 w-36">+998 97 712 96 96 +998 95 503 09 09</p>
+          <p class="mt-5 w-80">Sag'bon 186, Olmazor tumani, Toshkent, O'zbekiston</p>
+
+          <ul class="footer__logo flex mt-7 gap-8">
+            <li class="footer__logo-item cursor-pointer hover:scale-[1.2] duration-100">
+              <img src="./images/facebook.svg" alt="facebook">
+            </li>
+            <li class="footer__logo-item cursor-pointer hover:scale-[1.2] duration-100">
+              <img src="./images/instagram.svg" alt="instagram">
+            </li>
+            <li class="footer__logo-item cursor-pointer hover:scale-[1.2] duration-100">
+              <img src="./images/telegram.svg" alt="telegram">
+            </li>
+            <li class="footer__logo-item cursor-pointer hover:scale-[1.2] duration-100">
+              <img src="./images/tiktok.svg" alt="tiktok">
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer__line mx-16 h-[2px] bg-gradient-to-r from-[#f64d4d3a] to-[#4d5ef639] mt-10">
+      </div>
+
+      <div class="footer__end flex justify-between items-center mx-16 mt-10 pb-10">
+        <p class="text-[#1E1E1E] text-[19px]">2022  Nextstore.com</p>
+        <p class="text-[#1E1E1E] text-[19px] mr-32"> Powered by </p>
+      </div>
+    </div>
+  </footer>
+ </div>
+
+ <script src="./infos.js"></script>
+  <script src="./app.js"></script>
+</body>
+
+</html>
